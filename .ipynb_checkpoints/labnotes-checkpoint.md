@@ -10,6 +10,4 @@ Practical tools I set up :
 
 * Lazy gitpush (add commit push in one line)
 * Lazy time stamp : insert timestamp in file on Maj + F5
-
-ven. 16 déc. 2022 12:43:13 CET
-* Basically hard to import data
+* Typora to edit md 
