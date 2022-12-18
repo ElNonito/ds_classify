@@ -2,7 +2,7 @@
 
 Arnaud Martin
 
-I tried to include actual scientific results in this repport by improving on the author's work. I know you probably have read too much paper already for a Christmas vacation so don't hesitate to skip to the parts summary evaluate, improve, argument. They will provide you with all you need to grade this work without going through all the rationales.   
+I know you probably have read too much paper already for a Christmas vacation so don't hesitate to skip to the parts **summary evaluate, improve, argument**. They will provide you with all you need to grade this work. The paper in itself 
 
 [TOC]
 
@@ -52,14 +52,12 @@ I choosed to go for a CNN base line model because it was the one I would impleme
 
 ## Summary on skill improve 
 
-* Made a baseline model as fast as possible. No preprocessing, CNN taken straight from the flower tp. 
-
-| Model version  | Description                                                  | metrics                                   |                                    |
-| -------------- | ------------------------------------------------------------ | ----------------------------------------- | ---------------------------------- |
-| Dataset Author | Not mine                                                     | -Recall : ???<br />-Error rate : 4.3~21.7 |                                    |
-| Baseline       | - Made to be fastest possible<br />-No Preprocessing<br />-CNN from flower TP | - Recall : 0<br />-Error Rate : 23%       | The models always predict healthy. |
-|                |                                                              |                                           |                                    |
-|                |                                                              |                                           |                                    |
+| Model version         | Argument                                                     | metrics                                     | explain                                                      |
+| --------------------- | ------------------------------------------------------------ | ------------------------------------------- | ------------------------------------------------------------ |
+| Author's              | Not mine                                                     | recall : ???<br />ER : 4.3~21.7             | I think recall would be a more interesting metric.           |
+| Baseline              | - Made fast (in developement time)<br />-No Preprocessing<br />-CNN from flower TP<br />- 5 epochs | Recall : 0<br />ER : 23%                    | The models always predict healthy. Probably because most example are healthy. |
+| v1<br />Data augment° | -Same as base line<br />-Data augmentation (rotation only to not trim the tumor: I have no medical knowledge) for tumor examples to 50/50 healthy/unhealthy ratio | Recall : 0.9%<br />ER : 99.1 (0.9=9samples) | - Recall is not 0 but I expected at least 50%<br />- Model output is always around 0.45 <br />-To me it seem the model is mostly random. Maybe the task is too complex for the model<br />-When model says positive the person is really positive |
+| v2                    | - Same as v1<br />-Simplified input by going grey scale<br />-Complexified model by adding depth and width | ER                                          |                                                              |
 
 
 
