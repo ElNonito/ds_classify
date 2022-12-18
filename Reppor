@@ -2,7 +2,9 @@
 
 Arnaud Martin
 
+I tried to include actual scientific results in this repport by improving on the author's work. I know you probably have read too much paper already for a Christmas vacation so don't hesitate to skip to the parts summary evaluate, improve, argument. They will provide you with all you need to grade this work without going through all the rationales.   
 
+[TOC]
 
 ## Dataset overview
 
@@ -33,7 +35,37 @@ I want to build (a little bit) on the authors work. I assume in a real scenario 
 
 My plan is to first build a model that the authors did not explore a CNN. Then to compare it's error rate to the authors models. Then depending on the time I have I will either try to improve it and compare it's recall to my model or try a model made by the authors and compare it's recall to my model. 
 
- 
+## Baseline model description
+
+I choosed to go for a CNN base line model because it was the one I would implement the fastest. At first I choosed not to go throught any preprocessing as I had no idea if it would have any impact for the work and since I did not had a base line model I wouldn't be able to compare the impact of the preprocessing
+
+
+
+
+
+## Summary on skill evaluate
+
+* I decided to focus on the tumor/not tumor problem because it is the most important to an hypothetical patient
+* I used recall as a metric. Ethically a false negative could mean a patient's death while a false positive would likely be caught on by an other doctor in the healing process. False negative is the enemy in this problem.
+* I used error rate as a metric as it is the metric used by the authors of the original dataset and I compared my models to theirs. (I realy used accuracy and Error rate = 1 - Accuracy)
+* Just to be nerdy and try it out I made some ROC curves.
+
+## Summary on skill improve 
+
+* Made a baseline model as fast as possible. No preprocessing, CNN taken straight from the flower tp. 
+
+| Model version  | Description                                                  | metrics                                   |                                    |
+| -------------- | ------------------------------------------------------------ | ----------------------------------------- | ---------------------------------- |
+| Dataset Author | Not mine                                                     | -Recall : ???<br />-Error rate : 4.3~21.7 |                                    |
+| Baseline       | - Made to be fastest possible<br />-No Preprocessing<br />-CNN from flower TP | - Recall : 0<br />-Error Rate : 23%       | The models always predict healthy. |
+|                |                                                              |                                           |                                    |
+|                |                                                              |                                           |                                    |
+
+
+
+## Summary skill Argument/Explain
+
+
 
 ## Bibliography & Sources
 
