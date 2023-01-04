@@ -61,7 +61,6 @@ I choosed to go for a CNN base line model because it was the one I would impleme
 
 
 
-## Summary skill Argument/Explain
 
 
 
