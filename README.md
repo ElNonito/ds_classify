@@ -58,7 +58,8 @@ I choosed to go for a CNN base line model because it was the one I would impleme
 | Baseline              | - Made fast (in developement time)<br />-No Preprocessing<br />-CNN from flower TP<br />- 5 epochs | Recall : 0<br />ER : 23%                    | The models always predict healthy. Probably because most example are healthy. |
 | v1<br />Data augment° | -Same as base line<br />-Data augmentation (rotation only to not trim the tumor: I have no medical knowledge) for tumor examples to 50/50 healthy/unhealthy ratio | Recall : 0.9%<br />ER : 99.1 (0.9=9samples) | - Recall is not 0 but I expected at least 50%<br />- Model output is always around 0.45 <br />-To me it seem the model is mostly random. Maybe the task is too complex for the model<br />-When model says positive the person is really positive |
 | v2                    | - Same as v1<br />-Simplified input by going grey scale<br />-Complexified model by adding depth and width | ER:100%<br />Recall:0                       | - At this point I think I have a bug<br />-Maybe the shuffle doesn't < |
-
+| v3   | - Implemented manually train_test_split and shuffle   | ER:43%<br />Recall:0  | I notice accuracy does not update through epochs and find it could be due to a bad learning rate selection [8] |
+| v4   | - I search for a good learning rate using grid search | ER:~45%<br />Recall:0 | For all tested learning rates (1 to 0.001) Recall always stayed at 0. |
 
 
 
